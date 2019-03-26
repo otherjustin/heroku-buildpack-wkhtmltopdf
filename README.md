@@ -1,7 +1,7 @@
 # heroku-buildpack-wkhtmltopdf
 
 This buildpack downloads and extracts the most recent
-[wkhtmltopdf](https://wkhtmltopdf.org/) binaries and works on both `cedar-14`
+[wkhtmltopdf](https://wkhtmltopdf.org/) binaries and works on both `heroku-18`
 and `heroku-16` stacks.
 
 
@@ -10,14 +10,14 @@ and `heroku-16` stacks.
 Just add the buildpack to your heroku app by executing:
 
 ```bash
-heroku buildpacks:add https://github.com/simplefractal/heroku-buildpack-wkhtmltopdf.git
+heroku buildpacks:add https://github.com/otherjustin/heroku-buildpack-wkhtmltopdf.git
 ```
 
 You can also force this buildpack to be the first Heroku process by using the
 `--index` option:
 
 ```bash
-heroku buildpacks:add --index=1 https://github.com/simplefractal/heroku-buildpack-wkhtmltopdf.git
+heroku buildpacks:add --index=1 https://github.com/otherjustin/heroku-buildpack-wkhtmltopdf.git
 ```
 
 ## Usage
@@ -40,15 +40,15 @@ you can just execute `/app/bin/wkhtmltopdf ...` from your app.
   leaving the binary in some location. It increases the boot time since new
   shell script files needed to be loaded (inside `.profile.d/`);
 - Most of the available buildpacks works only on `cedar-14` stack -- and
-  [`heroku-16` is the default dyno stack since May 08,
-  2017](https://devcenter.heroku.com/changelog-items/1139).
+  [`heroku-18` is the default dyno stack since March 26,
+  2019](https://devcenter.heroku.com/changelog-items/1139).
 
 This buildpack addresses the following issues:
 
-- Uses wkhtmltopdf version 0.12.4
+- Uses wkhtmltopdf version 0.12.5
 - Downloads wkhtmltopdf binaries from [wkhtmltopdf.org](http://wkhtmltopdf.org)
 - Do not add new environment variables or shell scripts
-- Tested on both `cedar-14` and `heroku-16` stack images
+- Tested on `cedar-14`,`heroku-18` and `heroku-16` stack images
 
 ## Sample app
 
