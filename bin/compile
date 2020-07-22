@@ -4,7 +4,7 @@
 BUILD_DIR=$1		#/tmp/build_23456738293
 CACHE_DIR=$2		#/app/tmp/cache
 
-WKHTMLTOPDF_URL="https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb"
+WKHTMLTOPDF_URL="https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb"
 WKHTMLTOPDF_FILE="wkhtmltox.deb"
 DESTINATION=$BUILD_DIR/vendor/bin  # will be `/app/vendor/bin` inside dyno
 
